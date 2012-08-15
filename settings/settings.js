@@ -61,7 +61,7 @@ SETTINGS.Handler = {
 
 			if($input.attr('type') == 'password') {
 				$input.attr('placeholder', chrome.i18n.getMessage('login_confirmed'));
-				retrun;
+				return;
 			}
 
 			// set default value
