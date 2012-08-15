@@ -1,3 +1,20 @@
 {
-	
+	"links": {
+		"message": "Links"
+	},
+	"search": {
+		"message": "Suche"
+	},
+	"timeline": {
+		"message": "Timeline"
+	},
+	"timeline_afk": {
+		"message": "Nicht vorm PC"
+	},
+	"timeline_offline": {
+		"message": "Offline"
+	},
+	"timeline_online": {
+		"message": "Selber anwesend"
+	}
 }

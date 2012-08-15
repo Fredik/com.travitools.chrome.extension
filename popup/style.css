@@ -1,0 +1,14 @@
+.clearfix:after {content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
+.left, #npc li {float:left}
+
+section > section {border:1px solid #3d1400;border-radius:3px;margin-top:5px}
+section > section:first-child {margin-top:0}
+section > section > header {background-image:-webkit-linear-gradient(#CD4F2A,#8D2B14);box-shadow:inset 0 1px 0 rgba(255,255,255,.21);border-radius:2px 2px 0px 0px;padding:10px 15px}
+section > section > header > h1 {color:white;font-family:'PT Sans',sans-serif;font-size:11px;font-weight:normal;margin:0}
+
+section > section > div, section > section > nav {border-top:1px solid black}
+section > section > div {padding:5px}
+section > section > nav {}
+
+/* npc */
+#npc li {width:19%}
