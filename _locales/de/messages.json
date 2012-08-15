@@ -1,9 +1,84 @@
 {
+	"account": {
+		"message": "Benutzerkonto"
+	},
+	"acoustic": {
+		"message": "akustisch"
+	},
+	"attendance": {
+		"message": "Anwesenheitskontrolle"
+	},
+	"bonustime": {
+		"message": "Bonuszeit"
+	},
+	"bonustime_arena": {
+		"message": "Kampfbonus"
+	},
+	"bonustime_community": {
+		"message": "Gemeinschaftsaktion"
+	},
+	"bonustime_minigame": {
+		"message": "Minispiel"
+	},
+	"bonustime_trade": {
+		"message": "Handel"
+	},
+	"bonustimes": {
+		"message": "Bonuszeiten"
+	},
 	"links": {
 		"message": "Links"
 	},
+	"login_confirmed": {
+		"message": "Benutzerdaten bestaetigt. Eingabe nur im Aenderungsfall noetig!"
+	},
+	"login_failed": {
+		"message": "Das eingegebene Passwort ist falsch oder gehoert nicht dem Benutzer mit der eingegebenen Benutzernummer! Bitte vergewissere dich, dass sowohl Benutzernummer und Passwort richtig ist."
+	},
+	"login_user_not_found": {
+		"message": "Es konnte kein Benutzer mit der eingegebenen Benutzernummer gefunden werden!"
+	},
+	"marketplace": {
+		"message": "Marktplatz"
+	},
+	"modules": {
+		"message": "Module"
+	},
+	"notes": {
+		"message": "Hinweise"
+	},
+	"notes_content": {
+		"message": "Einige der verwendeten Grafiken und der Name <a href='http://travianer.de' target='_blank'>Travianer</a> sind Eigentum der <a href='http://www.traviangames.de/' target='_blank'>Travian Games GmbH</a>."
+	},
+	"notifications": {
+		"message": "Benachrichtigungen"
+	},
+	"notifications_acoustic": {
+		"message": "Akustische Travianer-Benachrichtigungnen"
+	},
+	"notifications_acoustic_description": {
+		"message": "Soll bei wichtigen Benachrichtigungen in Travianer (z.B. Taube, Chat) eine akustische Benachrichtigung ausgegeben werden?<br><strong>Hinweis:</strong> Der Browser muss neu gestartet werden, damit diese Einstellung wirksam wird!"
+	},
+	"password": {
+		"message": "Kennwort"
+	},
+	"password_description": {
+		"message": "Bitte gebe hier dein <strong>TraviTools-Kennwort</strong> ein. Dieses wird verschl&uuml;sselt gespeichert, sodass keinerlei R&uuml;ckschl&uuml;sse auf dein Kennwort m&ouml;glich sind."
+	},
 	"search": {
 		"message": "Suche"
+	},
+	"settings": {
+		"message": "Einstellungen"
+	},
+	"settings_success": {
+		"message": "Einstellungen gespeichert!"
+	},
+	"settings_success_counter": {
+		"message": "Vor <span>0</span> Sekunden"
+	},
+	"settings_title": {
+		"message": "Einstellungen - TraviTools"
 	},
 	"timeline": {
 		"message": "Timeline"
@@ -16,5 +91,23 @@
 	},
 	"timeline_online": {
 		"message": "Selber anwesend"
+	},
+	"travitools_open": {
+		"message": "TraviTools &ouml;ffnen"
+	},
+	"updateInterval": {
+		"message": "Aktualisierungsintervall"
+	},
+	"updateInterval_description": {
+		"message": "Bitte gebe hier ein, nach welcher Zeitspanne wieder aktuelle Informationen von TraviTools geladen werden sollen. Als gutes optimum zwischen Aktualit&auml;t und Performance empfehlen wir 15 Minuten.<br><strong>Hinweis:</strong> Diese Einstellung wird unter umst&auml;nden erst nach einem Neustart des Browsers aktiv!"
+	},
+	"userID": {
+		"message": "Benutzernummer"
+	},
+	"userID_description": {
+		"message": "Bitte gebe hier deine <strong>TraviTools-Benutzernummer</strong> ein. Diese findest du in der URL, wenn du ein Profil auf <a href='http://travitools.com/de/' target='_blank'>TraviTools</a> &ouml;ffnest."
+	},
+	"visual": {
+		"message": "visuell"
 	}
 }

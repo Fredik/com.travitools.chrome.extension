@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title data-i18n="settings_title"></title>
+	<meta charset="UTF-8" />
+
+	<!-- Stylesheets -->
+	<link rel="stylesheet" href="http://travitools.com/css/style.css" />
+	<style type="text/css">
+	a[href^="http://travitools.com/"] {background:none !important;padding-right:0 !important}
+	</style>
+
+	<!-- JavaScripts -->
+	<script type="text/javascript" src="../jquery.js"></script>
+	<script type="text/javascript" src="../core.js"></script>
+	<script type="text/javascript" src="settings.js"></script>
+</head>
+<body>
+	<div id="checkPassword" style="display:none;position:fixed;z-index:100000;top:0;left:0;right:0;bottom:0;background:url(../images/spinner.svg) no-repeat center center white;background-size:30% 30%"></div>
+	<div id="menubar">
+		<div>
+			<nav>
+				<ul>
+					<li class="hot"><a href="http://travitools.com/" data-i18n="travitools_open"></a></li>
+				</ul>
+				<ul class="secondary-nav">
+					<li><a href="https://www.facebook.com/TraviTools" target="_blank">Facebook</a></li>
+					<li><a href="https://twitter.com/#!/TraviTools" target="_blank">Twitter</a></li>
+					<li><a href="https://plus.google.com/116321209055489436271" target="_blank">Google+</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+
+	<form id="main">
+		<div class="mainInner right">
+			<section>
+				<header><h1 data-i18n="account"></h1></header>
+				<div>
+					<dl>
+						<dt><label for="userID" data-i18n="userID"></label></dt>
+						<dd>
+							<input type="number" name="userID" id="userID" />
+							<small data-i18n="userID_description"></small>
+						</dd>
+
+						<dt><label for="password" data-i18n="password"></label></dt>
+						<dd>
+							<input type="password" name="password" id="password" />
+							<small data-i18n="password_description"></small>
+						</dd>
+
+						<dt><label for="updateInterval" data-i18n="updateInterval"></label></dt>
+						<dd>
+							<input type="number" name="updateInterval" id="updateInterval" /> Minuten
+							<small data-i18n="updateInterval_description"></small>
+						</dd>
+					</dl>
+				</div>
+			</section>
+			<section id="notification">
+				<header><h1 data-i18n="notifications"></h1></header>
+				<div>
+					<dl>
+						<dt class="reversed"><label for="acousticNotifications" data-i18n="notifications_acoustic"></label></dt>
+						<dd>
+							<input type="checkbox" name="acousticNotifications" id="acousticNotifications" />
+							<small data-i18n="notifications_acoustic_description"></small>
+						</dd>
+
+						<dt data-i18n="bonustimes"></dt>
+						<dd>
+							<fieldset>
+								<dl>
+									<!-- headline -->
+									<dt data-i18n="bonustime"></dt>
+									<dd class="hot">
+										<ul>
+											<li class="left" style="text-align:center;width:30%" data-i18n="visual"></li>
+											<li class="left" style="text-align:center;width:30%" data-i18n="acoustic"></li>
+										</ul>
+									</dd>
+
+									<!-- bonus times -->
+									<dt>
+										<label data-i18n="bonustime_arena"></label>
+									</dt>
+									<dd style="padding-top:5px">
+										<ul>
+											<li class="left" style="text-align:center;width:30%"><input type="checkbox" name="bonustime_arema_visual" /></li>
+											<li class="left" style="text-align:center;width:30%"><input type="checkbox" name="bonustime_arena_acoustic" /></li>
+										</ul>
+									</dd>
+
+									<dt><label data-i18n="bonustime_minigame"></label></dt>
+									<dd style="padding-top:5px">
+										<ul>
+											<li class="left" style="text-align:center;width:30%"><input type="checkbox" name="bonustime_minigame_visual" /></li>
+											<li class="left" style="text-align:center;width:30%"><input type="checkbox" name="bonustime_minigame_acoustic" /></li>
+										</ul>
+									</dd>
+
+									<dt><label data-i18n="bonustime_community"></label></dt>
+									<dd style="padding-top:5px">
+										<ul>
+											<li class="left" style="text-align:center;width:30%"><input type="checkbox" name="bonustime_community_visual" /></li>
+											<li class="left" style="text-align:center;width:30%"><input type="checkbox" name="bonustime_community_acoustic" /></li>
+										</ul>
+									</dd>
+
+									<dt><label data-i18n="bonustime_trade"></label></dt>
+									<dd style="padding-top:5px">
+										<ul>
+											<li class="left" style="text-align:center;width:30%"><input type="checkbox" name="bonustime_trade_visual" /></li>
+											<li class="left" style="text-align:center;width:30%"><input type="checkbox" name="bonustime_trade_acoustic" /></li>
+										</ul>
+									</dd>
+								</dl>
+							</fieldset>
+						</dd>
+					</dl>
+				</div>
+			</section>
+		</div>
+		<aside class="sidebar left">
+			<div class="alert-message success" id="successMessage" style="display:none;margin:20px 0 0;text-align:center">
+				<p data-i18n="settings_success"></p>
+				<p style="font-size:.8em" data-i18n="settings_success_counter"></p>
+			</div>
+			<section>
+				<header><h1 data-i18n="modules"></h1></header>
+				<div>
+					<ul id="modules">
+						<li>
+							<label>
+								<input type="checkbox" name="" />
+								<span data-i18n="attendance"></span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="" data-container-id="notification" />
+								<span data-i18n="notifications"></span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="" />
+								<span data-i18n="marketplace"></span>
+							</label>
+						</li>
+						<li>
+							<label>
+								<input type="checkbox" name="" />
+								<span data-i18n="search"></span>
+							</label>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<section>
+				<header><h1 data-i18n="notes"></h1></header>
+				<div class="smallFont" data-i18n="notes_content"></div>
+			</section>
+		</aside>
+	</form>
+</body>
+</html>
