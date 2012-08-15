@@ -8,6 +8,9 @@
 	"attendance": {
 		"message": "Anwesenheitskontrolle"
 	},
+	"boards": {
+		"message": "Bretter"
+	},
 	"bonustime": {
 		"message": "Bonuszeit"
 	},
@@ -25,6 +28,27 @@
 	},
 	"bonustimes": {
 		"message": "Bonuszeiten"
+	},
+	"bread": {
+		"message": "Brot"
+	},
+	"bricks": {
+		"message": "Ziegel"
+	},
+	"clay": {
+		"message": "Lehm"
+	},
+	"coal": {
+		"message": "Kohle"
+	},
+	"flour": {
+		"message": "Mehl"
+	},
+	"grain": {
+		"message": "Getreide"
+	},
+	"iron": {
+		"message": "Eisen"
 	},
 	"links": {
 		"message": "Links"
@@ -58,6 +82,9 @@
 	},
 	"notifications_acoustic_description": {
 		"message": "Soll bei wichtigen Benachrichtigungen in Travianer (z.B. Taube, Chat) eine akustische Benachrichtigung ausgegeben werden?<br><strong>Hinweis:</strong> Der Browser muss neu gestartet werden, damit diese Einstellung wirksam wird!"
+	},
+	"ore": {
+		"message": "Erz"
 	},
 	"password": {
 		"message": "Kennwort"
@@ -101,6 +128,9 @@
 	"updateInterval_description": {
 		"message": "Bitte gebe hier ein, nach welcher Zeitspanne wieder aktuelle Informationen von TraviTools geladen werden sollen. Als gutes optimum zwischen Aktualit&auml;t und Performance empfehlen wir 15 Minuten.<br><strong>Hinweis:</strong> Diese Einstellung wird unter umst&auml;nden erst nach einem Neustart des Browsers aktiv!"
 	},
+	"user_memo": {
+		"message": "Pers&ouml;nliche Notizen"
+	},
 	"userID": {
 		"message": "Benutzernummer"
 	},
@@ -109,5 +139,8 @@
 	},
 	"visual": {
 		"message": "visuell"
+	},
+	"wood": {
+		"message": "Holz"
 	}
 }

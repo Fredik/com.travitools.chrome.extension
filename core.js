@@ -22,6 +22,32 @@ Storage.prototype.getItem = function(key) {
 var CORE = {};
 
 /**
+ * Extends jQuery's chainable methods.
+ */
+$.fn.extend({
+
+	slideFadeIn: function(duration, callback) {
+		var height = this.show().css({height:'auto'}).height();
+		this.css({height:0}).animate({
+			height: height,
+			opacity: 1
+		}, duration, callback);
+	},
+
+	slideFadeOut: function(duration, callback) {
+		if(this.is(':hidden')) return;
+		this.animate({
+			height: 0,
+			opacity: 0
+		}, duration, function() {
+			$(this).hide();
+			callback();
+		});
+	}
+
+});
+
+/**
  * core methods
  */
 $.extend(CORE, {
@@ -115,12 +141,12 @@ CORE.Collapsible = {
 		var $target = $('#' + $button.data('collapsibleContainer').replace(/(:|\.)/g, '\\$1'));
 
 		if($isOpen) {
-			$target.stop().slideUp('fast', $.proxy(function() {
+			$target.stop().slideFadeOut(200, $.proxy(function() {
 				this._toggleImage($button, 'arrowRight');
 			}, this));
 			$isOpen = false;
 		} else {
-			$target.stop().slideDown('fast', $.proxy(function() {
+			$target.stop().slideFadeIn(200, $.proxy(function() {
 				this._toggleImage($button, 'arrowDown');
 			}, this));
 			$isOpen = true;
@@ -139,7 +165,7 @@ CORE.Collapsible = {
 	 * @param	string		image
 	 */
 	_toggleImage: function(button, image) {
-		button.removeAttr('class').addClass('icon jsCollapsible').addClass(image);
+		button.attr('src', '../images/'+ image +'.svg');
 	}
 
 }

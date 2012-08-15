@@ -1,24 +1,38 @@
-body {font-family:sans-serif;font-size:12px}
-#mainmenu {width:300px}
+body {background-color:#f7f7f7;font-family:'Lucida Sans','Lucida Grande',Monaco,Geneva,sans-serif;font-size:13px}
+#mainmenu {width:250px}
 
 .clearfix:after {content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0}
 .cpointer {cursor:pointer}
 .left, #npc li {float:left}
 
-section > section {border:1px solid #3d1400;border-radius:4px;margin-top:5px}
+section > section {margin-top:10px}
 section > section:first-child {margin-top:0}
-section > section > header {background-image:-webkit-linear-gradient(#CD4F2A,#8D2B14);box-shadow:inset 0 1px 0 rgba(255,255,255,.21);border-radius:3px 3px 0px 0px;padding:5px 10px}
-section > section > header > h1 {color:white;font-weight:normal;margin:0}
 
-section > section > div, section > section > nav {border-top:1px solid black}
-section > section > div {padding:5px}
-section > section > nav {}
-section > section ul {margin:0;padding:0}
-section > section li {list-style:none outside;text-shadow:0 1px 0 white}
-section > section > nav li {border-top:1px solid transparent;border-bottom:1px solid transparent;height:27px;line-height:27px;padding:0 10px 0 35px}
-section > section > nav li:first-child {border-top:0 none}
-section > section > nav li:last-child {border-bottom:0 none;border-radius:0px 0px 3px 3px}
-section > section > nav li:hover {background-color:#ffeddb;border-color:#3B0E06;color:#c14500;text-shadow:0 1px 0 #193c65}
+section > header {color:#333;text-shadow: 0 1px 0 #eee}
+section > header .left {margin-top:1px}
+section h1 {margin:0 0 0 21px;font-size:14px}
+
+section > div, section > section > nav {border-top:1px solid #b5b5b5}
+section > div {padding:5px}
+section ul {margin:0;padding:0}
+section li {list-style:none outside;text-shadow:0 1px 0 white}
+section > nav li, .sResults li {border-top:1px solid transparent;border-bottom:1px solid transparent;height:21px;line-height:21px;padding:0}
+section > nav li > span {margin:0 10px 0 21px}
+section > nav li > .left {margin:3px -17px 0 1px}
+section > nav li:first-child, .sResults li:first-child {border-top:0 none}
+section > nav li:hover, .sResults li:hover {background-image:-webkit-linear-gradient(#F0F0F0,#E0E0E0);border-color:#b5b5b5}
 
 /* npc */
 #npc li {text-align:center;width:19%}
+
+/* search */
+#searchContainer input {border:1px solid #CDCDCD;margin:0;padding:9px;width:100%;font-family:Arial,Helvetica,sans-serif;font-size:11px;outline:0;-webkit-box-sizing:border-box;box-sizing:border-box}
+#searchContainer button {position:absolute;top:0;right:0;width:32px;height:100%;z-index:99;border:1px solid #C3C3C3;box-shadow:inset 0 1px 2px white;-webkit-box-shadow:inset 0 1px 2px white;color:#686868;background-color:#f8f8f8}
+#searchContainer button:not([disabled]) {background:-webkit-linear-gradient(#F8F8F8,#E8E8E8)}
+#searchContainer button:not([disabled]):active {background:#eee;color: 505050;border-color:#c0c0c0;box-shadow:0 0 5px #e2e2e2 inset,0 1px 1px #fff;-webkit-box-shadow:0 0 5px #e2e2e2 inset,0 1px 1px #fff;text-shadow:0 -1px 1px #f1f1f1}
+
+.sResults {background:#fafafa;border:1px solid #CDCDCD;box-shadow:0 2px 2px -2px #CCC;margin-top:3px;position:relative}
+.sResults > .arrow {position:absolute;top:-9px;left:50%;margin-left:-8px !important;width:15px;height:9px;background:url(../images/resultsarrow.png) no-repeat}
+.sResults .updates {max-height:300px;overflow-y:auto}
+.sResults li:last-child {border-bottom:0 none}
+.sResults li > span {margin-left:6px !important}
