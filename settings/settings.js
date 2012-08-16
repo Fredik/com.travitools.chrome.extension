@@ -109,14 +109,12 @@ SETTINGS.AccountHandler.prototype = {
 	_init: function(userID, password) {
 		this._password = password;
 		this._userID = userID;
-
-		$('#checkPassword').show();
-
 		this._checkPassword();
 	},
 
 	_checkPassword: function() {
-		if(this._password == '' || this._userID == 0) return;
+		if(this._password == '' || !this._userID) return;
+		$('#checkPassword').show();
 		$.ajax({
 			url: 'http://travitools.com/de/APILogin/',
 			data: {
