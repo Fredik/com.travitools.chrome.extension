@@ -2,12 +2,11 @@
  * Class and function collection based upon WoltLab Community Framework
  * @license	GNU Lesser General Public License <http://opensource.org/licenses/lgpl-license.php>
  */
-var versions = new Array('travianer.de/game.php', 'travians.com/game.php', 'traviani.it/game.php', 'travianer.fr/game.php', 'travianer.net/game.php');
-var defaultSettings = {}
 
 /**
  * extend local storage to load default settings
  */
+var defaultSettings = {}
 Storage.prototype.getItem = function(key) {
 	var value = this[key];
 	if(value == undefined) {
@@ -58,24 +57,7 @@ $.extend(CORE, {
 	 */
 	_idCounter: 0,
 
-	/**
-	 * initializes language system and hide all elements witch need specific options
-	 */
-	initPage: function() {
-		$('[data-i18n]:not(.i18n-replaced)').each(function() {
-			$(this).html(chrome.i18n.getMessage($(this).data('i18n')));
-		});
-		$('[data-i18n-value]:not(.i18n-replaced)').each(function() {
-			$(this).val(chrome.i18n.getMessage($(this).data('i18n-value')));
-		});
-		$('[data-i18n-title]:not(.i18n-replaced)').each(function() {
-			$(this).attr('title', chrome.i18n.getMessage($(this).data('i18n-title')));
-		});
-		$('[data-required-storage]').each(function() {
-			var itemName = $(this).data('requiredStorage');
-			
-		});
-	},
+	_versions: new Array('travianer.de/game.php', 'travians.com/game.php', 'traviani.it/game.php', 'travianer.fr/game.php', 'travianer.net/game.php'),
 
 	/**
 	 * Returns a dynamically created id.
@@ -100,6 +82,41 @@ $.extend(CORE, {
 	 */
 	inArray: function(needle, haystack) {
 		return ($.inArray(needle, haystack) != -1);
+	},
+
+	/**
+	 * initializes language system and hide all elements witch need specific options
+	 */
+	initPage: function() {
+		$('[data-i18n]:not(.i18n-replaced)').each(function() {
+			$(this).html(chrome.i18n.getMessage($(this).data('i18n')));
+		});
+		$('[data-i18n-value]:not(.i18n-replaced)').each(function() {
+			$(this).val(chrome.i18n.getMessage($(this).data('i18n-value')));
+		});
+		$('[data-i18n-title]:not(.i18n-replaced)').each(function() {
+			$(this).attr('title', chrome.i18n.getMessage($(this).data('i18n-title')));
+		});
+	},
+
+	/**
+	 * inject content script (e.g. for attendance control)
+	 * @param	tabID		integer		defaults to the active tab of the current window
+	 */
+	injectContentScript: function(tabID) {
+		if(tabID == undefined) tabID = null;
+		chrome.tabs.executeScript(tabID, {file:'contentscript.js'});
+	},
+
+	/**
+	 * check if given tab match versions pattern
+	 */
+	traviansTab: function(tab) {
+		if(tab.url == undefined) return false;
+		$.each(this._versions, function(index, pattern) {
+			if(tab.url.indexOf(pattern) != -1) return true;
+		});
+		return false;
 	}
 
 });
