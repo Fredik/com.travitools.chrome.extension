@@ -14,6 +14,27 @@ SETTINGS.Handler = {
 		this._bindEvents();
 		this._setDefaultValues();
 
+		// handle required (optional) permissions
+		$('[data-required-permission]').each(function() {
+			var $element = $(this);
+			var permission = $element.data('requiredPermission');
+			chrome.permissions.contains({permissions:[permission]}, function(result) {
+				if(!result) {
+					$element.find('input').attr('disabled', 'disabled');
+					$element.find('img.right').click(function() {
+						chrome.permissions.request({permissions:[permission]}, function(granted) {
+							if(granted) {
+								$element.find('img.right').remove();
+								$element.find('input').removeAttr('disabled');
+							}
+						});
+					});
+				} else {
+					$element.find('img.right').remove();
+				}
+			});
+		});
+
 		window.setInterval(function() {
 			var current = parseInt($('#successMessage p:last-child span').text());
 			$('#successMessage span').text(current + 1);
