@@ -113,9 +113,9 @@ $.extend(CORE, {
 	 */
 	traviansTab: function(tab) {
 		if(tab.url == undefined) return false;
-		$.each(this._versions, function(index, pattern) {
-			if(tab.url.indexOf(pattern) != -1) return true;
-		});
+		for(index in this._versions) {
+			if(tab.url.indexOf(this._versions[index]) != -1) return true;
+		}
 		return false;
 	}
 
