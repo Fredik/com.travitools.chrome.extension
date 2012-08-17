@@ -65,6 +65,9 @@
 	"marketplace": {
 		"message": "Marktplatz"
 	},
+	"marketplace_outdated": {
+		"message": "Keine aktuelle Preise verf&uuml;gbar"
+	},
 	"modules": {
 		"message": "Module"
 	},
@@ -112,6 +115,9 @@
 	},
 	"timeline_afk": {
 		"message": "Nicht vorm PC"
+	},
+	"timeline_comment": {
+		"message": "Kommentar hinzuf&uuml;gen"
 	},
 	"timeline_offline": {
 		"message": "Offline"

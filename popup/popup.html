@@ -14,7 +14,7 @@
 </head>
 <body>
 	<section id="mainmenu">
-		<section>
+		<section data-required-options="marketplace">
 			<header>
 				<img src="../images/arrowDown.svg" alt="" class="cpointer left jsCollapsible" data-collapsible-container="marketplaceContainer" data-is-open="1" />
 				<h1 data-i18n="marketplace"></h1>
@@ -64,21 +64,24 @@
 				</ul>
 			</div>
 		</section>
-		<section>
+		<section data-required-options="userID password">
 			<header>
 				<img src="../images/arrowDown.svg" alt="" class="cpointer left jsCollapsible" data-collapsible-container="timelineContainer" data-is-open="1" />
 				<h1 data-i18n="timeline"></h1>
 			</header>
 			<nav id="timelineContainer">
 				<ul>
-					<li class="cpointer">
+					<li class="cpointer" data-timeline-status="online">
 						<span data-i18n="timeline_online"></span>
+						<img src="../images/signature.svg" alt="" class="cpointer right" data-i18n-title="timeline_comment" />
 					</li>
-					<li class="cpointer">
+					<li class="cpointer" data-timeline-status="afk">
 						<span data-i18n="timeline_afk"></span>
+						<img src="../images/signature.svg" alt="" class="cpointer right" data-i18n-title="timeline_comment" />
 					</li>
-					<li class="cpointer">
+					<li class="cpointer" data-timeline-status="offline">
 						<span data-i18n="timeline_offline"></span>
+						<img src="../images/signature.svg" alt="" class="cpointer right" data-i18n-title="timeline_comment" />
 					</li>
 				</ul>
 			</nav>
@@ -90,6 +93,10 @@
 			</header>
 			<nav id="linksContainer">
 				<ul>
+					<li class="cpointer" id="attendance" data-required-options="attendance">
+						<!-- <img src="../images/document.svg" alt="" class="left" /> -->
+						<span data-i18n="attendance"></span>
+					</li>
 					<li class="cpointer" id="userMemo">
 						<img src="../images/document.svg" alt="" class="left" />
 						<span data-i18n="user_memo"></span>
@@ -101,7 +108,7 @@
 				</ul>
 			</nav>
 		</section>
-		<section>
+		<section data-required-options="search">
 			<header>
 				<img src="../images/arrowDown.svg" alt="" class="cpointer left jsCollapsible" data-collapsible-container="searchContainer" data-is-open="1" />
 				<h1 data-i18n="search"></h1>
@@ -119,6 +126,15 @@
 				</div>
 			</div>
 		</section>
+	</section>
+	<section id="attendanceContainer" style="display:none">
+		<header>
+			<img src="../images/arrowLeft.svg" alt="" class="backward cpointer left" />
+			<h1 data-i18n="attendance"></h1>
+		</header>
+		<nav>
+			<ul></ul>
+		</nav>
 	</section>
 </body>
 </html>
