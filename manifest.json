@@ -1,6 +1,10 @@
 {
 	"background": {
-		"scripts": ["background.js"]
+		"scripts": [
+			"jquery.js",
+			"core.js",
+			"background.js"
+		]
 	},
 	"browser_action": {
 		"default_icon": "icon.png",
